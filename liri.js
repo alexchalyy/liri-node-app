@@ -6,7 +6,9 @@
 
 require("dotenv").config();
 const axios = require("axios");
+const moment = require("moment");
 var keys = require("./keys.js");
+moment().format();
 
 //--------------------------------------------------------------------------------
 
@@ -20,7 +22,10 @@ function app(command, parameter) {
 
     switch (command) {
         case "concert-this":
-            showConcert(parameter);
+            if (parameter)  {
+                showConcert(parameter);
+            }
+            else showConcert("drake");  // if user does not enter artist/band, drake concerts are looked up
             break;
      /*   case "spotify-this-song":
             showSong(parameter);
@@ -40,11 +45,18 @@ function app(command, parameter) {
 
 function showConcert(parameter) {
 
+//  This function requests artist/band concert information and prints out venue name/location/date for top 5 results.
+
     var queryUrl = "https://rest.bandsintown.com/artists/" + parameter + "/events?app_id=codingbootcamp";
 
     axios.get(queryUrl)
         .then(function (response) {
-            console.log(response.data[0].venue.jason.stringify);
+            for (var c = 0; c < 5; c++) {
+                console.log("\nVenue name: " + response.data[c].venue.name);
+                console.log("Venue location: " + response.data[c].venue.country + ", " + response.data[c].venue.city);
+                console.log("Date of the event: " + moment(response.data[c].datetime).format('MM/DD/YYYY'));
+            }
+            console.log("\n");
         })
         .catch(function (error) {
             console.log(error);

@@ -5,20 +5,19 @@ Written by Alex Chalyy on 3/29/2019
 
 concert-this
 
-If  "node liri.js concert-this <artist/band name here>" is called in console:
+If  "node liri.js concert-this <artist/band name here>" is called in console: PASS
 
-    Make bandsintown API get request in axios with artist/band name.
+    Make bandsintown API get request in axios with artist/band name. PASS
 
-    From received response:
+    From received response: PASS
 
-        Print in console for each result:
+        Print in console for each result (5): PASS
 
-            - Name of venue
+            - Name of venue PASS
 
-            - Venue location
+            - Venue location PASS
 
-            - Date of the event (use moment to format this as "MM/DD/YYYY")
-
+            - Date of the event (use moment to format this as "MM/DD/YYYY") PASS
 
 spotify-this-song
 
@@ -79,6 +78,6 @@ if "node liri.js do-what-it-says" is called
 
 Invalid input
 
-If another input is used not described above for "node liri.js"
+If another input is used not described above for "node liri.js" PASS
 
-    print "Invalid input"
+    print "Invalid input" PASS
