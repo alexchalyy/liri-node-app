@@ -24,7 +24,7 @@ spotify-this-song
 
 If "node liri.js spotify-this-song '<song name here>'" is called in console with song name
 
-    Make spotify API get request with provided song name.
+    Make spotify API get request using axios with provided song name.
 
     From received response:
 
