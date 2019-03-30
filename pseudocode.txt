@@ -1,0 +1,84 @@
+Liri Bot pseudo code
+
+Written by Alex Chalyy on 3/29/2019
+
+
+concert-this
+
+If  "node liri.js concert-this <artist/band name here>" is called in console:
+
+    Make bandsintown API get request in axios with artist/band name.
+
+    From received response:
+
+        Print in console for each result:
+
+            - Name of venue
+
+            - Venue location
+
+            - Date of the event (use moment to format this as "MM/DD/YYYY")
+
+
+spotify-this-song
+
+If "node liri.js spotify-this-song '<song name here>'" is called in console with song name
+
+    Make spotify API get request in axios with provided song name.
+
+    From received response:
+
+        Print in console for each result:
+
+            - Artist(s)
+
+            - The song's name
+
+            - A preview link of the song from spotify
+
+            - The album that the song is from
+
+else repeat previous spotify get request steps with "The Sign" by Ace of Base
+
+
+movie-this
+
+if "node liri.js movie-this '<movie name here>'" is called with movie name
+
+    Make OMDB API get request in axios with provided movie name
+
+    From received response:
+
+        Print in console for each result:
+
+            - Title of the movie
+
+            - Year the movie came out
+
+            - IMDB Rating of the movie
+
+            - Rotten Tomatores Rating of the movie
+
+            - Country where the movie was produced
+
+            - Language of the movie
+            
+            - Plot of the movie
+
+            - Actors in the movie
+
+else repeat previous OMDB API get request steps with 'Mr. Nobody'
+
+
+do-what-it-says
+
+if "node liri.js do-what-it-says" is called
+
+    using fs node package, take text inside random.txt to run spotify-this-song for "I Want it That Way"
+
+
+Invalid input
+
+If another input is used not described above for "node liri.js"
+
+    print "Invalid input"
