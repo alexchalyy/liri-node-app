@@ -45,31 +45,31 @@ else repeat previous spotify get request steps with "The Sign" by Ace of Base PA
 
 movie-this
 
-if "node liri.js movie-this '<movie name here>'" is called with movie name
+if "node liri.js movie-this '<movie name here>'" is called with movie name PASS
 
-    Make OMDB API get request in axios with provided movie name
+    Make OMDB API get request in axios with provided movie name PASS
 
-    From received response:
+    From received response: PASS
 
-        Print in console for each result:
+        Print in console for each result: PASS
 
-            - Title of the movie
+            - Title of the movie PASS
 
-            - Year the movie came out
+            - Year the movie came out PASS
 
-            - IMDB Rating of the movie
+            - IMDB Rating of the movie PASS
 
-            - Rotten Tomatores Rating of the movie
+            - Rotten Tomatores Rating of the movie PASS
 
-            - Country where the movie was produced
+            - Country where the movie was produced PASS
 
-            - Language of the movie
+            - Language of the movie PASS
             
-            - Plot of the movie
+            - Plot of the movie PASS
 
-            - Actors in the movie
+            - Actors in the movie PASS
 
-else repeat previous OMDB API get request steps with 'Mr. Nobody'
+else repeat previous OMDB API get request steps with 'Mr. Nobody' PASS
 
 
 do-what-it-says

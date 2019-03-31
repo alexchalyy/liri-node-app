@@ -36,7 +36,7 @@ function MakeTitle()    {
 
 function app(command, parameter) {
 
-    //  This statement checks for user input and performs proper action.
+//  This statement checks for user input and performs proper action.
 
     switch (command) {
         case "concert-this":
@@ -52,7 +52,10 @@ function app(command, parameter) {
             else Sign();
             break; 
         case "movie-this":
-            showMovie(parameter);
+            if (parameter)  {
+                showMovie(parameter);
+            }
+            else showMovie("Mr. Nobody");
             break; /*
         case "do-what-it-says":
             doWhatItSays();
@@ -66,7 +69,7 @@ function app(command, parameter) {
 
 function showConcert(parameter) {
 
-    //  This function requests artist/band concert information and prints out venue name/location/date for top 5 results.
+//  This function requests artist/band concert information and prints out venue name/location/date for top 5 results.
 
     var queryUrl = "https://rest.bandsintown.com/artists/" + parameter + "/events?app_id=codingbootcamp";
 
@@ -88,7 +91,7 @@ function showConcert(parameter) {
 
 function showSong(song) {
 
-    //  This function requests song information and prints artist(s), song name, a preview link of the song from spotify, and album.
+//  This function requests song information and prints artist(s), song name, a preview link of the song from spotify, and album.
 
     spotify
         .search({ type: 'track', query: song })
@@ -110,7 +113,7 @@ function showSong(song) {
 
 function Sign() {
 
-    //  This function makes api spotify get call for Ace of Base "The Sign" song and prints out in case no input is added for search song name.
+//  This function makes api spotify get call for Ace of Base "The Sign" song and prints out in case no input is added for search song name.
 
     spotify
         .search({ type: 'track', query: 'The Sign' })
@@ -134,9 +137,24 @@ function Sign() {
 
 //--------------------------------------------------------------------------------
 
-function showMovie(parameter)   {
+function showMovie(movie)   {
 
-//  This function displays movie search results from OMDB API get call and displays 5 results including title, year, ratings, country, language, plot, and actors. 
+//  This function displays movie search results from OMDB API get call and displays title, year, ratings, country, language, plot, and actors. 
 
-    console.log("here");
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=full&apikey=trilogy&tomatoes=true";
+
+    axios.get(queryURL)
+    .then(function (response) {
+        console.log("\nMovie Title: " + response.data.Title);
+        console.log("Release Year: " + response.data.Year);
+        console.log("IMDB Rating: " + response.data.Ratings[0].Value);
+        console.log("Rotten Tomatoes Rating: " + response.data.tomatoRating);
+        console.log("Country where Produced: " + response.data.Country);
+        console.log("Language of movie: " + response.data.Language);
+        console.log("Plot: " + response.data.Plot);
+        console.log("Actors: " + response.data.Actors + "\n");
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
 }
