@@ -77,9 +77,11 @@ function showConcert(parameter) {
     axios.get(queryUrl)
         .then(function (response) {
             for (var c = 0; c < 5; c++) {
-                console.log("\nVenue name: " + response.data[c].venue.name);
-                console.log("Venue location: " + response.data[c].venue.country + ", " + response.data[c].venue.city);
-                console.log("Date of the event: " + moment(response.data[c].datetime).format('MM/DD/YYYY'));
+                if (response.data[c])   {
+                    console.log("\nVenue name: " + response.data[c].venue.name);
+                    console.log("Venue location: " + response.data[c].venue.country + ", " + response.data[c].venue.city);
+                    console.log("Date of the event: " + moment(response.data[c].datetime).format('MM/DD/YYYY'));
+                }
             }
             console.log("\n");
         })
