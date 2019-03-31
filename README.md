@@ -14,7 +14,7 @@ This program asks the user to provide the following input options:
 
     Example of input/out is shown below in screenshot:
 
-    ![Image of concert data with input](https://github.com/alexchalyy/liri-node-app/images/concert-this-input.png)
+    ![concert data with input](images/concert-this-input.png)
 
 * spotify-this-song
 
