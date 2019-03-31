@@ -19,25 +19,28 @@ If  "node liri.js concert-this <artist/band name here>" is called in console: PA
 
             - Date of the event (use moment to format this as "MM/DD/YYYY") PASS
 
+else repeat previous spotify get request steps with "Drake" PASS
+
+
 spotify-this-song
 
-If "node liri.js spotify-this-song '<song name here>'" is called in console with song name
+If "node liri.js spotify-this-song '<song name here>'" is called in console with song name PASS
 
-    Make spotify API get request using axios with provided song name.
+    Make spotify API get request using axios with provided song name. PASS
 
-    From received response:
+    From received response: PASS
 
-        Print in console for each result:
+        Print in console for each result: PASS
 
-            - Artist(s)
+            - Artist(s) PASS
 
-            - The song's name
+            - The song's name PASS
 
-            - A preview link of the song from spotify
+            - A preview link of the song from spotify PASS
 
-            - The album that the song is from
+            - The album that the song is from PASS
 
-else repeat previous spotify get request steps with "The Sign" by Ace of Base
+else repeat previous spotify get request steps with "The Sign" by Ace of Base PASS
 
 
 movie-this
