@@ -72,14 +72,14 @@ if "node liri.js movie-this '<movie name here>'" is called with movie name PASS
 else repeat previous OMDB API get request steps with 'Mr. Nobody' PASS
 
 
-do-what-it-says
+do-what-it-says PASS
 
-if "node liri.js do-what-it-says" is called
+if "node liri.js do-what-it-says" is called PASS
 
-    using fs node package, take text inside random.txt to run spotify-this-song for "I Want it That Way"
+    using fs node package, take text inside random.txt to run spotify-this-song for "I Want it That Way" PASS
 
 
-Invalid input
+Invalid input PASS
 
 If another input is used not described above for "node liri.js" PASS
 
