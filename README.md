@@ -48,7 +48,7 @@ This program asks the user to provide the following input options:
 
     "node liri movie-this iron man"
 
-    Example of input/output is hown below in screenshot:
+    Example of input/output is shown below in screenshot:
 
     ![movie this with input](images/ironman.PNG)
 
