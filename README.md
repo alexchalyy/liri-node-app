@@ -44,7 +44,7 @@ This program asks the user to provide the following input options:
 
     If user enters movie name in console, movie information is printed including title, year, IMDB and Rotten Tomato ratings, country, language, plot, and actors.
 
-    User input should be like:
+    User input should be like (note: for certain movie titles article like "The" must be inserted to produce correct result):
 
     "node liri movie-this iron man"
 
