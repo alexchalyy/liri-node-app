@@ -46,11 +46,11 @@ This program asks the user to provide the following input options:
 
     User input should be like:
 
-    "node liri movie-this terminator"
+    "node liri movie-this iron man"
 
     Example of input/output is hown below in screenshot:
 
-    ![movie this with input](images/terminator.PNG)
+    ![movie this with input](images/ironman.PNG)
 
     If user does not provide movie in console, "Mr. Nobody" movie information is displayed.
 

@@ -47,10 +47,10 @@ function app(command, parameter) {
             else showConcert("drake");  // if user does not enter artist/band, drake concerts are looked up
             break;
         case "spotify-this-song":
-            if (parameter) {
-                showSong(parameter);
-            }
-            else Sign();
+              if (parameter) {
+                  showSong(parameter);
+              }
+              else Sign();
             break;
         case "movie-this":
             if (parameter) {
@@ -77,7 +77,7 @@ function showConcert(parameter) {
     axios.get(queryUrl)
         .then(function (response) {
             for (var c = 0; c < 5; c++) {
-                if (response.data[c])   {
+                if (response.data[c]) {
                     console.log("\nVenue name: " + response.data[c].venue.name);
                     console.log("Venue location: " + response.data[c].venue.country + ", " + response.data[c].venue.city);
                     console.log("Date of the event: " + moment(response.data[c].datetime).format('MM/DD/YYYY'));
@@ -144,14 +144,14 @@ function showMovie(movie) {
 
     //  This function displays movie search results from OMDB API get call and displays title, year, ratings, country, language, plot, and actors. 
 
-    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=full&apikey=trilogy&tomatoes=true";
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
 
     axios.get(queryURL)
         .then(function (response) {
             console.log("\nMovie Title: " + response.data.Title);
             console.log("Release Year: " + response.data.Year);
             console.log("IMDB Rating: " + response.data.Ratings[0].Value);
-            console.log("Rotten Tomatoes Rating: " + response.data.tomatoRating);
+            console.log("Rotten Tomatoes Rating: " + response.data.Ratings[1].Value);
             console.log("Country where Produced: " + response.data.Country);
             console.log("Language of movie: " + response.data.Language);
             console.log("Plot: " + response.data.Plot);
