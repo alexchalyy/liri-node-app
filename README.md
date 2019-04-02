@@ -24,7 +24,7 @@ This program asks the user to provide the following input options:
 
 * spotify-this-song
 
-    If user provides a song name in console, top 5 (if present) closes matches are printed in console including artist, song, preview link, and album.
+    If user provides a song name in console, top 5 (if present) closet matches are printed in console including artist, song, preview link, and album.
 
     User input should be like:
 
